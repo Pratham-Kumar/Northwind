@@ -1,0 +1,93 @@
+<mvc:View
+    controllerName="com.sap.northwind.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="Order Details"
+    >
+        <content>
+            <Table
+                id="idProductsTable"
+                items="{/Order_Details}"
+                mode="MultiSelect"
+            >
+                <headerToolbar>
+                    <OverflowToolbar id="otbSubheader">
+                        <ToolbarSpacer />
+                        <SearchField
+                            ariaLabelledBy="text1"
+                            id="maxPrice"
+                            search="onSearch"
+                        >
+                            <layoutData>
+                                <OverflowToolbarLayoutData
+                                    maxWidth="300px"
+                                    shrinkable="true"
+                                    priority="NeverOverflow"
+                                />
+                            </layoutData>
+                        </SearchField>
+                        <Button
+                            text="Delete"
+                            type="Transparent"
+                            press="onDelete"
+                        />
+                        <Button
+                            text="Add"
+                            type="Transparent"
+                            press="onAdd"
+                        />
+                        <Button
+                            text="Upload"
+                            type="Transparent"
+                            press="onUpload"
+                        />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column width="12em">
+                        <Text text="OrderID" />
+                    </Column>
+                    <Column
+                        minScreenWidth="Tablet"
+                        demandPopin="true"
+                    >
+                        <Text text="ProductID" />
+                    </Column>
+                    <Column
+                        minScreenWidth="Tablet"
+                        demandPopin="true"
+                    >
+                        <Text text="UnitPrice" />
+                    </Column>
+                    <Column
+                        minScreenWidth="Tablet"
+                        demandPopin="true"
+                    >
+                        <Text text="Quantity" />
+                    </Column>
+                    <Column
+                        minScreenWidth="Tablet"
+                        demandPopin="true"
+                    >
+                        <Text text="Discount" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{OrderID}" />
+                            <Text text="{ProductID}" />
+                            <Text text="{UnitPrice}" />
+                            <Text text="{Quantity}" />
+                            <Text text="{Discount}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

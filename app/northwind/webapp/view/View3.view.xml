@@ -1,0 +1,37 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true"
+    controllerName="com.sap.northwind.controller.View3"
+>
+    <Page
+        id="page"
+        title="Attachments"
+    >
+        <VBox id="_IDGenVBox12">
+            <HBox id="_IDGenHBox15">
+                <Button
+                    id="_IDGenButton8"
+                    text="Add"
+                    press="onAddPress"
+                />
+                <Button
+                    id="_IDGenButton7"
+                    text="Delete"
+                    press="onDeletePress"
+                />
+                <Button
+                    id="_IDGenButto12"
+                    text="Upload"
+                    icon="sap-icon://upload"
+                    press="onImportPress"
+                />
+                <Button
+                    id="_IDGenButton13"
+                    icon="sap-icon://search"
+                    press="onSearchPress"
+                />
+            </HBox>
+        </VBox>
+    </Page>
+</mvc:View>
