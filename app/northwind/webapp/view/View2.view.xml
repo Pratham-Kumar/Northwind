@@ -3,6 +3,9 @@
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
+    xmlns:upload="sap.m.upload"
+    xmlns:u="sap.ui.unified"
+    xmlns:l="sap.ui.layout"
 >
     <Page
         id="page"
@@ -41,10 +44,26 @@
                             press="onAdd"
                         />
                         <Button
-                            text="Upload"
+                            text="Update"
                             type="Transparent"
-                            press="onUpload"
+                            press="onUpdate"
                         />
+                        <Button
+                            text="Export"
+                            type="Transparent"
+                            icon="sap-icon://excel-attachment"
+                            press="onExport"
+                        />
+                            <u:FileUploader
+                                id="fileUploader"
+                                uploadUrl="upload/"
+                                change="onFileUploadChange"
+                                placeholder="Choose a CSV file"
+                            />
+                            <Button
+                                text="Convert to JSON"
+                                press="onConvertToJsonPress"
+                            />
                     </OverflowToolbar>
                 </headerToolbar>
                 <columns>
